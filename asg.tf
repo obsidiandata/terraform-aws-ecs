@@ -1,5 +1,5 @@
 resource "aws_autoscaling_group" "ecs" {
-  name = "ecs-${var.name}"
+  name = "new-ecs-${var.name}"
 
   mixed_instances_policy {
     launch_template {
@@ -48,7 +48,7 @@ resource "aws_autoscaling_group" "ecs" {
 }
 
 resource "aws_ecs_capacity_provider" "ecs_capacity_provider" {
-  name = "${var.name}-capacity-provider"
+  name = "${var.name}-new-capacity-provider"
 
   auto_scaling_group_provider {
     auto_scaling_group_arn         = aws_autoscaling_group.ecs.arn
