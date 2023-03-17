@@ -107,7 +107,7 @@ variable "asg_protect_from_scale_in" {
 }
 
 variable "asg_target_capacity" {
-  default     = 70
+  default     = 100
   description = "Target average capacity percentage for the ECS capacity provider to track for autoscaling."
 }
 
