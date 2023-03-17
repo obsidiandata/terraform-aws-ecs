@@ -1,5 +1,5 @@
 resource "aws_autoscaling_group" "ecs" {
-  name = "new-ecs-${var.name}"
+  name = "ecs-${var.name}"
 
   mixed_instances_policy {
     launch_template {
